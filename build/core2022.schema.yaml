@@ -2,9 +2,9 @@ __build_info:
   rime_version: 1.11.2
   timestamps:
     core2022.custom: 0
-    core2022.schema: 1661153760
+    core2022.schema: 1733366861
     default: 1717774589
-    default.custom: 1673862468
+    default.custom: 1733366861
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
