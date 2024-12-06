@@ -1,2 +1,5 @@
-2024/12/04-22:00:18.775899 0x205053ac0 Creating DB /Users/zyf/Library/Rime/easy_english.userdb since it was missing.
-2024/12/04-22:00:18.811480 0x205053ac0 Delete type=3 #1
+2024/12/05-10:47:50.299174 0x205053ac0 Recovering log #3
+2024/12/05-10:47:50.299541 0x205053ac0 Level-0 table #5: started
+2024/12/05-10:47:50.307145 0x205053ac0 Level-0 table #5: 254 bytes OK
+2024/12/05-10:47:50.324231 0x205053ac0 Delete type=0 #3
+2024/12/05-10:47:50.324254 0x205053ac0 Delete type=3 #2
