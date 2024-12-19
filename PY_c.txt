@@ -1,0 +1,61 @@
+# Rime table
+#@/db_name	PY_c
+#@/db_type	tabledb
+#@/rime_version	1.11.2
+#@/tick	70
+本地服务	ben di fu wu	4
+不	bu	2
+部分	bu fen	3
+不支持	bu zhi chi	2
+产生	chan sheng	2
+重叠的	chong die de	1
+重叠的部分	chong die de bu fen	1
+当	dang	2
+的	de	4
+读	du	2
+多大	duo da	4
+构成	gou cheng	2
+规模	gui mo	3
+滚动	gun dong	3
+滚动的	gun dong	1
+及	ji	2
+即使	ji shi	2
+居民的	ju min de	2
+可	ke	2
+可能	ke neng	2
+可支配收入	ke zhi pei shou ru	1
+了	le	2
+哦	o	1
+哦有	o you	1
+企业	qi ye	1
+企业消费规模	qi ye xiao fei gui mo	1
+区域	qu yu	4
+人	ren	2
+上方	shang fang	2
+时	shi	2
+是	shi	2
+收入来源	shou ru lai yuan	2
+数字	shu zi	3
+数字消费能力	shu zi xiao fei neng li	3
+弹出一个	tan chu yi ge	2
+通过	tong guo	2
+为什么	wei shen me	2
+我	wo	5
+县市	xian shi	2
+消费	xiao fei	3
+消费能力	xiao fei neng li	1
+页面	ye mian	3
+页面的	ye mian de	2
+一个	yi ge	4
+一级	yi ji	2
+有	you	4
+与	yu	2
+咋	za	2
+在	zai	3
+在这个	zai zhe ge	1
+在这个页面的	zai zhe ge ye mian de	1
+这个	zhe ge	2
+政府	zheng fu	1
+政府可支配收入	zheng fu ke zhi pei shou ru	1
+中	zhong	4
+做	zuo	2

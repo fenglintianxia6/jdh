@@ -283,8 +283,8 @@ patch:
     font_point: 16 #主字体字号
     #fullscreen: false
     inline_preedit: true #鼠须管开嵌入在QQ上可能会有点问题，这里可改为 true 关闭嵌入模式
-    label_font_face: "LXGW WenKai GB Screen, SimSun, SimSun-ExtB, SimSun-ExtG, TH-Tshyn-P0, TH-Tshyn-P1, TH-Tshyn-P2, TH-Tshyn-P16"
-    label_font_point: 16 #标号字号
+    #label_font_face: "LXGW WenKai GB Screen, SimSun, SimSun-ExtB, SimSun-ExtG, TH-Tshyn-P0, TH-Tshyn-P1, TH-Tshyn-P2, TH-Tshyn-P16"
+    label_font_point: 10 #标号字号
     #label_format: "%s."
     layout:
       min_width: 85
@@ -293,8 +293,9 @@ patch:
     line_spacing: 8
     hilite_spacing: 6
     spacing: 12
-    color_scheme: win11light
+    color_scheme: so_young_qmod_01
     color_scheme_dark: easy_dark
+    #candidate_list_layout: linear
     # 鼠须管盲打，嵌入首选，删除下面两行的#号，即可生效
     #alpha: 0.0001
     #inline_candidate: true
