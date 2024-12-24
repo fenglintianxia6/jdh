@@ -2,60 +2,149 @@
 #@/db_name	PY_c
 #@/db_type	tabledb
 #@/rime_version	1.11.2
-#@/tick	70
+#@/tick	150
+般	ban	2
 本地服务	ben di fu wu	4
+变迁	bian qian	1
 不	bu	2
+布达拉宫	bu da la gong	2
 部分	bu fen	3
+不仅是	bu jin shi	1
+不仅是一次	bu jin shi yi ci	1
 不支持	bu zhi chi	2
+草原	cao yuan	1
+草原和	cao yuan he	1
 产生	chan sheng	2
 重叠的	chong die de	1
 重叠的部分	chong die de bu fen	1
-当	dang	2
-的	de	4
+充满	chong man	1
+重新审视	chong xin shen shi	1
+出发	chu fa	1
+触手可及	chu shou ke ji	2
+从	cong	1
+从拉萨出发	cong la sa chu fa	1
+村落	cun luo	2
+当	dang	4
+当地居民	dang di ju min	1
+的	de	7
+的历史	de li shi	1
+抵达	di da	2
+底蕴	di yun	2
 读	du	2
 多大	duo da	4
+而又	er you	1
+仿佛	fang fu	2
+更是	geng shi	1
+更是一场心灵洗礼	geng shi yi chang xin ling xi li	1
 构成	gou cheng	2
+广袤	guang mao	1
 规模	gui mo	3
 滚动	gun dong	3
 滚动的	gun dong	1
+和	he	2
+和深厚的宗教文化	he shen hou de zong jiao wen hua	1
+宏伟壮观	hong wei zhuang guan	2
+湖	hu	1
+互搏	hu bo	1
+湖面	hu mian	2
+湖泊	hu po	2
 及	ji	2
 即使	ji shi	2
+简单	jian dan	1
+简单而又充满	jian dan er you chong man	1
+见证了	jian zheng le	1
+见证了前年的历史变迁	jian zheng le qian nian de li shi bian qian	1
+镜	jing	2
 居民的	ju min de	2
 可	ke	2
 可能	ke neng	2
+可以看到	ke yi kan dao	1
+可以看到广袤无垠的	ke yi kan dao guang mao wu yin de	1
 可支配收入	ke zhi pei shou ru	1
+拉萨	la sa	1
 了	le	2
+旅行者	lv xing zhe	1
+纳木错	na mu cuo	1
+纳木错湖	na mu cuo hu	1
 哦	o	1
 哦有	o you	1
 企业	qi ye	1
 企业消费规模	qi ye xiao fei gui mo	1
+千	qian	2
+前年	qian nian	1
+前行	qian xing	1
+清澈见底	qing che jian di	1
+清澈见底的互搏	qing che jian di de hu bo	1
+青藏公路	qing zang gong lu	1
+区	qu	2
 区域	qu yu	4
+让人	rang ren	2
+让人重新审视	rang ren chong xin shen shi	1
+让人叹为观止	rang ren tan wei guan zhi	1
 人	ren	2
+如	ru	2
 上方	shang fang	2
-时	shi	2
+深厚的	shen hou de	1
+深入	shen ru	2
+生活方式	sheng huo fang shi	2
+生命的意义	sheng ming de yi yi	2
+盛宴	sheng yan	1
+时	shi	4
 是	shi	2
+视觉	shi jue	1
+视觉盛宴	shi jue sheng yan	1
 收入来源	shou ru lai yuan	2
 数字	shu zi	3
 数字消费能力	shu zi xiao fei neng li	3
 弹出一个	tan chu yi ge	2
+叹为观止	tan wei guan zhi	1
+躺在	tang zai	1
+躺在帐篷里	tang zai zhang peng li	1
+体验	ti yan	1
+体验当地居民	ti yan dang di ju min	1
 通过	tong guo	2
 为什么	wei shen me	2
 我	wo	5
+无数	wu shu	1
+无垠的	wu yin de	1
+洗礼	xi li	1
+吸引着	xi yin zhe	1
+吸引着无数旅行者	xi yin zhe wu shu lv xing zhe	1
+西藏	xi zang	6
 县市	xian shi	2
 消费	xiao fei	3
 消费能力	xiao fei neng li	1
+新	xin	1
+心灵	xin ling	1
+信仰	xin yang	2
+新引得	xin yin de	1
+沿着	yan zhe	1
+沿着青藏公路前行	yan zhe qing zang gong lu qian xing	1
+仰望星空	yang wang xing kong	2
 页面	ye mian	3
 页面的	ye mian de	2
+夜幕降临	ye mu jiang lin	2
+一	yi	2
+一场	yi chang	1
+一次	yi ci	1
 一个	yi ge	4
 一级	yi ji	2
+以其独特的	yi qi du te de	2
+引得	yin de	1
 有	you	4
 与	yu	2
 咋	za	2
 在	zai	3
 在这个	zai zhe ge	1
 在这个页面的	zai zhe ge ye mian de	1
+藏	zang	2
+帐篷里	zhang peng li	1
 这个	zhe ge	2
+这片土地	zhe pian tu di	2
 政府	zheng fu	1
 政府可支配收入	zheng fu ke zhi pei shou ru	1
+之旅	zhi lv	2
 中	zhong	4
+自然风光	zi ran feng guang	2
+宗教文化	zong jiao wen hua	1
 做	zuo	2

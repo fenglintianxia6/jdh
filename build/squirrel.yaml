@@ -2,7 +2,7 @@ __build_info:
   rime_version: 1.11.2
   timestamps:
     squirrel: 1717774589
-    squirrel.custom: 1733461281
+    squirrel.custom: 1734594925
 app_options:
   co.zeit.hyper:
     ascii_mode: true
@@ -316,7 +316,7 @@ preset_color_schemes:
     text_color: 0x1a1a1a
 show_notifications_when: appropriate
 style:
-  color_scheme: win11light
+  color_scheme: so_young_qmod_01
   color_scheme_dark: easy_dark
   comment_font_face: "Consolas, Apple Color Emoji, TumanPUA, LXGW WenKai GB Screen, SimSun, SimSun-ExtB, SimSun-ExtG, TH-Tshyn-P0, TH-Tshyn-P1, TH-Tshyn-P2, TH-Tshyn-P16"
   comment_font_point: 16
@@ -326,8 +326,7 @@ style:
   hilite_spacing: 6
   hilited_corner_radius: 5
   inline_preedit: true
-  label_font_face: "LXGW WenKai GB Screen, SimSun, SimSun-ExtB, SimSun-ExtG, TH-Tshyn-P0, TH-Tshyn-P1, TH-Tshyn-P2, TH-Tshyn-P16"
-  label_font_point: 16
+  label_font_point: 10
   layout:
     min_width: 85
   line_spacing: 8

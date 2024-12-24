@@ -1,15 +1,15 @@
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    PY_c.custom: 0
-    PY_c.schema: 1733461281
+    PY_c.custom: 1734594925
+    PY_c.schema: 1734594925
     default: 1717774589
-    default.custom: 1733461281
+    default.custom: 1734594925
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
-    symbols: 1733461281
+    symbols: 1734594925
     symbols.custom: 0
 easy_english:
   comment_format:
@@ -470,8 +470,36 @@ simplification:
   tips: all
 speller:
   algebra:
-    - "abbrev/^([a-z]).+$/$1/"
-    - "abbrev/^([zcs]h).+$/$1/"
+    - "erase/^xx$/"
+    - "derive/^([jqxy])u$/$1v/"
+    - "derive/^([aoe])([ioun])$/$1$1$2/"
+    - "xform/^([aoe])(ng)?$/$1$1$2/"
+    - "xform/iu$/Q/"
+    - "xform/(.)ei$/$1W/"
+    - "xform/uan$/R/"
+    - "xform/[uv]e$/T/"
+    - "xform/un$/Y/"
+    - "xform/^sh/U/"
+    - "xform/^ch/I/"
+    - "xform/^zh/V/"
+    - "xform/uo$/O/"
+    - "xform/ie$/P/"
+    - "xform/i?ong$/S/"
+    - "xform/ing$|uai$/K/"
+    - "xform/(.)ai$/$1D/"
+    - "xform/(.)en$/$1F/"
+    - "xform/(.)eng$/$1G/"
+    - "xform/[iu]ang$/L/"
+    - "xform/(.)ang$/$1H/"
+    - "xform/ian$/M/"
+    - "xform/(.)an$/$1J/"
+    - "xform/(.)ou$/$1Z/"
+    - "xform/[iu]a$/X/"
+    - "xform/iao$/N/"
+    - "xform/(.)ao$/$1C/"
+    - "xform/ui$/V/"
+    - "xform/in$/B/"
+    - "xlit/QWRTYUIOPSDFGHJKLZXCVBNM/qwrtyuiopsdfghjklzxcvbnm/"
   alphabet: "['zyxwvutsrqponmlkjihgfedcba]"
   delimiter: " '"
 style:
