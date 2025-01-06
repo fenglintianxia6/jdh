@@ -1,2 +1,5 @@
-2025/01/06-12:09:10.396908 0x2004d0240 Creating DB /Users/zyf/Library/Rime/sbpy.userdb since it was missing.
-2025/01/06-12:09:10.443596 0x2004d0240 Delete type=3 #1
+2025/01/06-17:12:05.484829 0x2004d0240 Recovering log #3
+2025/01/06-17:12:05.485204 0x2004d0240 Level-0 table #5: started
+2025/01/06-17:12:05.493320 0x2004d0240 Level-0 table #5: 246 bytes OK
+2025/01/06-17:12:05.509948 0x2004d0240 Delete type=0 #3
+2025/01/06-17:12:05.509973 0x2004d0240 Delete type=3 #2
