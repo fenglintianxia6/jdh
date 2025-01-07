@@ -2,16 +2,16 @@ __build_info:
   rime_version: 1.11.2
   timestamps:
     default: 1717774589
-    default.custom: 1736168320
+    default.custom: 1736217465
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
-    sbfh: 1736168320
+    sbfh: 1736217465
     sbfh.custom: 0
     sbjm.custom: 0
-    sbjm.schema: 1736168320
-    sbxlm: 1736168320
+    sbjm.schema: 1736217465
+    sbxlm: 1736217465
     sbxlm.custom: 0
 bihua:
   dictionary: bihua
