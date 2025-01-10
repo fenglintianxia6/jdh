@@ -2,15 +2,15 @@ __build_info:
   rime_version: 1.11.2
   timestamps:
     default: 1717774589
-    default.custom: 1736395163
+    default.custom: 1736412361
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
-    symbols: 1736395164
+    symbols: 1736412361
     symbols.custom: 0
-    tigress.custom: 1736395164
-    tigress.schema: 1736395164
+    tigress.custom: 1736412362
+    tigress.schema: 1736412362
 chaifen:
   comment_format:
     - "xform/&nbsp;/ /"
