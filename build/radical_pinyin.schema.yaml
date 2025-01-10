@@ -1,14 +1,10 @@
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    default: 1717774589
-    default.custom: 1736488230
-    key_bindings: 1717774589
-    key_bindings.custom: 0
-    punctuation: 1717774589
-    punctuation.custom: 0
+    default: 1736338586
+    default.custom: 0
     radical_pinyin.custom: 0
-    radical_pinyin.schema: 1736475022
+    radical_pinyin.schema: 1736338586
 algebra_abc:
   - "xform/^zh/<a>/"
   - "xform/^ch/<e>/"
@@ -242,49 +238,34 @@ engine:
     - table_translator
 key_binder:
   bindings:
-    - {accept: "Control+p", send: Up, when: composing}
-    - {accept: "Control+n", send: Down, when: composing}
-    - {accept: "Control+b", send: Left, when: composing}
-    - {accept: "Control+f", send: Right, when: composing}
-    - {accept: "Control+a", send: Home, when: composing}
-    - {accept: "Control+e", send: End, when: composing}
-    - {accept: "Control+d", send: Delete, when: composing}
-    - {accept: "Control+k", send: "Shift+Delete", when: composing}
-    - {accept: "Control+h", send: BackSpace, when: composing}
-    - {accept: "Control+g", send: Escape, when: composing}
-    - {accept: "Control+bracketleft", send: Escape, when: composing}
-    - {accept: "Control+y", send: Page_Up, when: composing}
-    - {accept: "Alt+v", send: Page_Up, when: composing}
-    - {accept: "Control+v", send: Page_Down, when: composing}
-    - {accept: ISO_Left_Tab, send: "Shift+Left", when: composing}
     - {accept: "Shift+Tab", send: "Shift+Left", when: composing}
     - {accept: Tab, send: "Shift+Right", when: composing}
+    - {accept: "Alt+Left", send: "Shift+Left", when: composing}
+    - {accept: "Alt+Right", send: "Shift+Right", when: composing}
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
-    - {accept: comma, send: Page_Up, when: paging}
-    - {accept: period, send: Page_Down, when: has_menu}
-    - {accept: "Control+Shift+1", select: .next, when: always}
-    - {accept: "Control+Shift+2", toggle: ascii_mode, when: always}
-    - {accept: "Control+Shift+3", toggle: full_shape, when: always}
-    - {accept: "Control+Shift+4", toggle: simplification, when: always}
-    - {accept: "Control+Shift+5", toggle: extended_charset, when: always}
-    - {accept: "Control+Shift+exclam", select: .next, when: always}
-    - {accept: "Control+Shift+at", toggle: ascii_mode, when: always}
-    - {accept: "Control+Shift+numbersign", toggle: full_shape, when: always}
-    - {accept: "Control+Shift+dollar", toggle: simplification, when: always}
-    - {accept: "Control+Shift+percent", toggle: extended_charset, when: always}
+    - {accept: "Control+Shift+3", toggle: ascii_punct, when: always}
+    - {accept: "Control+Shift+numbersign", toggle: ascii_punct, when: always}
+    - {accept: "Control+Shift+4", toggle: traditionalization, when: always}
+    - {accept: "Control+Shift+dollar", toggle: traditionalization, when: always}
+    - {accept: KP_0, send: 0, when: composing}
+    - {accept: KP_1, send: 1, when: composing}
+    - {accept: KP_2, send: 2, when: composing}
+    - {accept: KP_3, send: 3, when: composing}
+    - {accept: KP_4, send: 4, when: composing}
+    - {accept: KP_5, send: 5, when: composing}
+    - {accept: KP_6, send: 6, when: composing}
+    - {accept: KP_7, send: 7, when: composing}
+    - {accept: KP_8, send: 8, when: composing}
+    - {accept: KP_9, send: 9, when: composing}
+    - {accept: KP_Decimal, send: period, when: composing}
+    - {accept: KP_Multiply, send: asterisk, when: composing}
+    - {accept: KP_Add, send: plus, when: composing}
+    - {accept: KP_Subtract, send: minus, when: composing}
+    - {accept: KP_Divide, send: slash, when: composing}
+  select_first_character: bracketleft
+  select_last_character: bracketright
 menu:
-  alternative_select_labels:
-    - "␣"
-    - ";"
-    - "3'"
-    - "4["
-    - "5]"
-    - 6
-    - 7
-    - 8
-    - 9
-    - 0
   page_size: 5
 schema:
   author: Mirtle
@@ -299,41 +280,11 @@ schema:
   version: 2.0.0
 speller:
   algebra:
-    - "derive/^([jqxy])u(?=^|$|')/$1v/"
-    - "derive/'([jqxy])u(?=^|$|')/'$1v/"
-    - "derive/^([aoe])([ioun])(?=^|$|')/$1$1$2/"
-    - "derive/'([aoe])([ioun])(?=^|$|')/'$1$1$2/"
-    - "xform/^([aoe])(ng)?(?=^|$|')/$1$1$2/"
-    - "xform/'([aoe])(ng)?(?=^|$|')/'$1$1$2/"
-    - "xform/iu(?=^|$|')/<q>/"
-    - "xform/(.)ei(?=^|$|')/$1<w>/"
-    - "xform/uan(?=^|$|')/<r>/"
-    - "xform/[uv]e(?=^|$|')/<t>/"
-    - "xform/un(?=^|$|')/<y>/"
-    - "xform/^sh/<u>/"
-    - "xform/^ch/<i>/"
-    - "xform/^zh/<v>/"
-    - "xform/'sh/'<u>/"
-    - "xform/'ch/'<i>/"
-    - "xform/'zh/'<v>/"
-    - "xform/uo(?=^|$|')/<o>/"
-    - "xform/ie(?=^|$|')/<p>/"
-    - "xform/([a-z>])i?ong(?=^|$|')/$1<s>/"
-    - "xform/ing(?=^|$|')|uai(?=^|$|')/<k>/"
-    - "xform/([a-z>])ai(?=^|$|')/$1<d>/"
-    - "xform/([a-z>])en(?=^|$|')/$1<f>/"
-    - "xform/([a-z>])eng(?=^|$|')/$1<g>/"
-    - "xform/[iu]ang(?=^|$|')/<l>/"
-    - "xform/([a-z>])ang(?=^|$|')/$1<h>/"
-    - "xform/ian(?=^|$|')/<m>/"
-    - "xform/([a-z>])an(?=^|$|')/$1<j>/"
-    - "xform/([a-z>])ou(?=^|$|')/$1<z>/"
-    - "xform/[iu]a(?=^|$|')/<x>/"
-    - "xform/iao(?=^|$|')/<n>/"
-    - "xform/([a-z>])ao(?=^|$|')/$1<c>/"
-    - "xform/ui(?=^|$|')/<v>/"
-    - "xform/in(?=^|$|')/<b>/"
-    - "xform/'|<|>//"
+    - "xform/'//"
+    - "derive/^([nl])ue$/$1ve/"
+    - "derive/'([nl])ue$/'$1ve/"
+    - "derive/^([jqxy])u/$1v/"
+    - "derive/'([jqxy])u/'$1v/"
   alphabet: "abcdefghijklmnopqrstuvwxyz;"
   delimiter: " '"
 translator:

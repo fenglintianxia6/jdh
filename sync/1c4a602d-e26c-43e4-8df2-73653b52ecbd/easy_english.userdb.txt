@@ -1,6 +1,0 @@
-# Rime user dictionary
-#@/db_name	easy_english
-#@/db_type	userdb
-#@/rime_version	1.11.2
-#@/tick	0
-#@/user_id	1c4a602d-e26c-43e4-8df2-73653b52ecbd
