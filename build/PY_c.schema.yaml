@@ -1,15 +1,15 @@
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    PY_c.custom: 1736488583
-    PY_c.schema: 1736488583
+    PY_c.custom: 1736489238
+    PY_c.schema: 1736489238
     default: 1717774589
-    default.custom: 1736488583
+    default.custom: 1736489238
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
-    symbols: 1736488584
+    symbols: 1736489238
     symbols.custom: 0
 easy_english:
   comment_format:
