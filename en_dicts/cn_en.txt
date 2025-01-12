@@ -14,8 +14,6 @@ X光片	Xguangpian
 X光片	xguangpian
 X射线	Xshexian
 X射线	xshexian
-Nabla算子	Nablasuanzi
-Nabla算子	nablasuanzi
 T恤	Txu
 T恤	txu
 T恤衫	Txushan
@@ -503,6 +501,8 @@ OK了吗	oklema
 公网IP	gongwangip
 Web开发	Webkaifa
 Web开发	webkaifa
+圈X	quanX
+圈X	quanx
 Switch版	Switchban
 Switch版	switchban
 Switch版本	Switchbanben

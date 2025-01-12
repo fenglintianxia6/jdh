@@ -1,0 +1,93 @@
+# Rime table
+# coding: utf-8
+#@/db_name	custom_phrase.txt
+#@/db_type	tabledb
+#
+# 自定义短语（快符）
+# 可为方案增加一些快符
+#
+# version: "2024-03-12"
+#
+# 此行之后不能写注释
+
+# 第一行
+：“	;q
+？	;w
+（	;e
+）	;r
+@	;t
+「	;y
+」	;u
+"	;i
+#	;o
+~	;p
+#第二行
+！	;a
+……	;s
+、	;d
+《	;f
+。”	;g
+_	;h
+》	;j
+|	;l
+#第三行
+“	;z
+*	;x
+”	;c
+——	;v
+%	;b
+<	;n
+>	;m
+
+
+# 微信表情
+[强]	ovql
+[嘘]	ovxu
+[晕]	ovyy
+[捂脸]	ovwl
+[微笑]	ovwx
+[偷笑]	ovtx
+[奸笑]	ovjx
+[呲牙]	ovzy
+[吃瓜]	ovcg
+[加油]	ovjy
+[可怜]	ovkl
+[嘿哈]	ovhh
+[流泪]	ovll
+[难过]	ovng
+[666]	ovlq
+[发呆]	ovfd
+[发怒]	ovfn
+[害羞]	ovhx
+[恐惧]	ovkj
+[得意]	ovdy
+[惊讶]	ovjd
+[勾引]	ovgy
+[玫瑰]	ovmg
+[庆祝]	ovqv
+[握手]	ovwu
+[合十]	ovbt
+[白眼]	ovby
+[拥抱]	ovyb
+[裂开]	ovlk
+[疑问]	ovyw
+[猪头]	ovvt
+[蛋糕]	ovdg
+[破涕为笑]	ovxk
+[旺柴]    	ovwc
+
+# oi引导表情
+😂	oixk
+🥺	oikl
+😭	oiku
+😡	oiuq
+🤬	oitm
+😨	oihp
+😅	oilh
+🙏	oibt
+🙄	oiby
+🙂	oiwx
+🤝	oiwu
+🥱	oihq
+✅	oidv
+❌	oico

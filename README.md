@@ -1,331 +1,261 @@
-# 雾凇拼音
-
-[GPL-3.0-only](https://spdx.org/licenses/GPL-3.0-only.html)
-
-![demo](./others/demo.webp)
-
-功能齐全，词库体验良好，长期更新修订。
-
-<br>
-
-[Rime Input Method Engine / 中州韵输入法引擎](https://rime.im/) 是一个跨平台的输入法算法框架。
-
-这里是 Rime 的一份配置仓库，用户需要下载各平台对应的前端，并将此配置应用到配置目录。
-
-雾凇拼音提供了一套开箱即用的完整配置，包含输入方案（全拼、常见双拼）、长期维护的开源词库及各项扩展功能。
-
-详细介绍：[Rime 配置：雾凇拼音](https://dvel.me/posts/rime-ice/)
-
-[常见问题](https://github.com/iDvel/rime-ice/issues/133)
-
-[更新日志](./others/CHANGELOG.md)
-
-<br>
-
-## 基本套路
-
-- 简体 | 全拼 | 双拼
-- 主要功能
-    -   轻量的英文输入，支持中英混输
-    -   [优化英文输入体验](https://dvel.me/posts/make-rime-en-better/)
-    -   拆字反查（<kbd>uU</kbd>+拼音），拆字辅码（拼音+<kbd>`</kbd>+拆字辅码）
-    -   自整理的 Emoji
-    -   以词定字（左右中括号：<kbd>[</kbd>、<kbd>]</kbd>）
-    -   长词优先
-    -   Unicode（<kbd>U</kbd>+Unicode 码位）
-    -   数字、人民币大写（<kbd>R</kbd>+数字）
-    -   日期、时间、星期（详见方案 `/date_translator` 节点）
-    -   农历（转写：<kbd>N</kbd>+八位数字；获取当前农历：全拼<kbd>nl</kbd>，双拼<kbd>lunar</kbd>）
-    -   简易计算器（<kbd>cC</kbd>+算式）
-    -   常见错音错字提示
-    -   置顶候选项（详见方案 `/pin_cand_filter` 节点）
-    -   所有标点符号直接上屏
-    -   特殊符号、字符输入（全拼<kbd>v</kbd>+首字母缩写；双拼<kbd>V</kbd>+首字母缩写）
-    -   拼音纠错（模糊音）
-    -   更多默认未启用的功能请参考 `lua/` 及方案注释
-- 简体字表、词库
-    -   [通用规范汉字表](https://github.com/iDvel/The-Table-of-General-Standard-Chinese-Characters)（by 中华人民共和国教育部）8K 常用汉字
-    -   [Unihan 字库](https://www.unicode.org/Public/)（by Unicode lnc | [UNICODE LICENSE V3](https://www.unicode.org/license.txt)）40K 大字库， **默认未启用**
-    -   [现代汉语常用词表](https://zh.wikipedia.org/wiki/%E7%8E%B0%E4%BB%A3%E6%B1%89%E8%AF%AD%E5%B8%B8%E7%94%A8%E8%AF%8D%E8%A1%A8)（by 中国国家语言文字工作委员会）
-    -   [华宇野风词库](http://bbs.pinyin.thunisoft.com/forum.php?mod=viewthread&tid=30049)（by 野风）
-    -   [简化字八股文](https://github.com/rime/rime-essay-simp)（by rime | [LGPL](https://github.com/rime/rime-essay-simp/blob/master/LICENSE)）
-    -   [清华大学开源词库](https://github.com/thunlp/THUOCL)（by THUNLP | [MIT](https://github.com/thunlp/THUOCL/blob/master/LICENSE)）
-    -   [腾讯词向量](https://ai.tencent.com/ailab/nlp/en/download.html)（@Huandeep [整理](https://github.com/iDvel/rime-ice/issues/24) | by Tencent AI Lab | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)）
-- 词库修订
-    - 校对大量异形词、错别字、错误注音
-    - 全词库完成注音
-    - 同义多音字注音
-    - 参考
-      -   《现代汉语词典》
-      -   《同义词词林》
-      -   《新华成语大词典》
-      -   [校对标准论坛](http://www.jiaodui.com/bbs/)
-- Rime、Squirrel、Weasel 常用配置项的详尽注释
-
-<br>
-
-## 长期维护词库
-
-因为没有找到一份比较好的词库，干脆自己维护一个。综合了几个不错的词库，精心调教了很多。
-
-主要维护的词库：
-
-- `8105` 字表。
-- `base` 基础词库。
-- `ext` 扩展词库，小词库。
-- `tencent` 扩展词库，大词库。
-- Emoji
-
-维护内容主要是异形词、错别字的校对，错误注音的修正，缺失的常用词汇的增添，词频的调整。
-
-欢迎在词库方面提 issue [#666](https://github.com/iDvel/rime-ice/issues/666) ，我会及时更新修正。
-
-<br>
-
-## 使用说明
-
-### 选择和安装 RIME 前端
-
-要使用雾凇拼音默认提供的所有功能，请保证
-- 您的 RIME 前端提供的 librime 版本 ≥ 1.8.5 且
-- 含有 librime-lua 依赖
-
-以下是主流平台上的一些 RIME 前端安装建议。部分信息具有时效性，请以当下具体情况为准：
-
-| 系统    | RIME 前端                                                    | 雾凇拼音版本要求                  | 备注                                                         |
-| ------- | ------------------------------------------------------------ | --------------------------------- | ------------------------------------------------------------ |
-| Android | [fcitx5-android](https://github.com/fcitx5-android/fcitx5-android/releases) + plugin.rime（小企鹅输入法） | ≥ 0.0.8                           | 暂不支持九宫格                                               |
-| Android | [Trime](https://github.com/osfans/trime)（同文输入法）       | ≥ 3.2.11                          |                                                              |
-| iOS     | [Hamster](https://apps.apple.com/cn/app/%E4%BB%93%E8%BE%93%E5%85%A5%E6%B3%95/id6446617683)（仓输入法） | N/A                               | 闭源；有内购                                                 |
-| Linux   | ibus + [ibus-rime](https://github.com/rime/ibus-rime)        | librime ≥ 1.8.5 且装有 librime-lua | 部分发行版需手动安装 librime-lua                             |
-| Linux   | fcitx5 + [fcitx5-rime](https://github.com/fcitx/fcitx5-rime) | librime ≥ 1.8.5 且装有 librime-lua | 部分发行版需手动安装 librime-lua                             |
-| macOS   | [Squirrel](https://github.com/rime/squirrel)（鼠须管）       | ≥ 1.0.0                           | 0.16.0 - 0.18.0 版本请参考[🔗](https://github.com/iDvel/rime-ice/issues/1062) |
-| macOS   | [fcitx5-macos](https://github.com/fcitx-contrib/fcitx5-macos) | N/A                               | 支持[卷轴模式](https://github.com/iDvel/rime-ice/issues/941) |
-| Windows | [Weasel](https://github.com/rime/weasel)（小狼毫）           | ≥ 0.15.0                            | 0.14.3 可手动更新 [rime.dll](https://github.com/iDvel/rime-ice/issues/197)（但不支持彩色 emoji）<br />Weasel 当下有兼容性问题，建议安装其他输入法备用 |
-
-Linux 依赖问题的具体解释请参考 [#840](https://github.com/iDvel/rime-ice/issues/840)。
-
-雾凇拼音的部分配置可能要求更高的 librime 或者客户端版本，这些功能已在具体配置文件中注明。
-
-以下安装方式，选择其一：
-
-- [手动安装](#使用说明)
-- [Git 安装](#git-安装)
-- [东风破 plum](#东风破-plum)
-- [自动部署脚本](#自动部署脚本)
-- [仓输入法](#仓输入法-hamster)
-- [Arch Linux](#arch-linux)（AUR）
-
-### 手动安装
-
-您可以将仓库打包下载，将所有文件复制粘贴到 RIME 前端的配置目录，重新部署。
-
-只需要使用或者更新词库的话，可以手动粘贴覆盖 `cn_dicts` `en_dicts` `opencc` 三个文件夹。
-
-> [!NOTE]
-> 雾凇拼音中多个文件可能与其他方案同名冲突，如果是新手想一键安装，建议备份原先配置，**清空配置目录**再导入。
-
-> [!NOTE]
->
-> 单独使用词库注意事项：`rime_ice.dict.yaml` 下面包含了大写字母，这和配置有些许绑定，可以直接删除，详细说明：[#356](https://github.com/iDvel/rime-ice/issues/356)
-
-您也可以前往 [Release](https://github.com/iDvel/rime-ice/releases) 界面，下载特定版本的词典文件（具体描述见 Release 说明），覆盖配置目录的对应文件。
-
-### Git 安装
-
-您如果熟悉 git 常用操作，可以使用 git clone 命令将本仓库克隆到对应前端的用户目录。由于本库提交历史较多且更改频繁，添加 `--depth` 参数可以显著减少传输体积。
-
-```bash
-git clone https://github.com/iDvel/rime-ice.git Rime --depth 1
-
-# 更新
-cd Rime
-git pull
-```
-
-通过 checkout 命令，您也可以实现更新部分文件的效果。
-
-### 东风破 [plum](https://github.com/rime/plum)
-
-选择配方（`others/recipes/*.recipe.yaml`）来进行安装或更新。
-
-<details>
-<summary>/plum/ 简易安装和使用教程</summary>
+# Rime 输入法 「简单鹤」双拼辅助码方案
+Rime 输入法配置方案，小鹤双拼+**简单鹤**乱序字根辅助方案+修改配置后的**全拼**（可加辅码）与 **虎码**（字词合并）方案
 
 ---
 
-安装 plum（仅需要执行一次）
-```bash
-# 请先安装 git 和 bash，并加入环境变量
-# 请确保和 github.com 的连接稳定
-cd ~
-git clone https://github.com/rime/plum.git plum
-# 卸载 plum 只需要删除 ~/plum 文件夹即可
-```
+## [简单鹤](https://flauver.github.io/jdh/)介绍
 
-更新 plum
-```bash
-cd ~/plum
-bash rime-install plum
-```
+![简单鹤字根图V8.4](other/简单鹤字根图V8.4.png)
 
-使用 plum 安装「雾凇拼音」方案的韵书（recipe）
-```bash
-cd ~/plum
-bash rime-install iDvel/rime-ice:others/recipes/full
-```
+####  乱序字根
 
-指定 RIME 前端为 fcitx5-rime
+使用官网 [字根记忆程序](https://flauver.github.io/jdh/gen.html)学习字根，最快能在一个小时内掌握简单鹤的字根
 
-```bash
-cd ~/plum
-rime_frontend=fcitx5-rime bash rime-install iDvel/rime-ice:others/recipes/full
-```
+#### 单字低重
 
-使用 plum 更新「雾凇拼音」的词库文件
+让你轻松盲打
 
-```sh
-cd ~/plum
-bash rime-install iDvel/rime-ice:others/recipes/all_dicts
-```
+#### 字词不重
 
----
-</details>
+简单鹤采用了极端的字词避重方式，在算码的时候尽量让更多的字处在三码位，剩下的四码单字则全部放在次选，好让四码首选永远可以畅快打词。
 
-词库配方只是更新具体词库文件，并不更新 `rime_ice.dict.yaml` 和 `melt_eng.dict.yaml`，因为用户可能会挂载其他词库。如果更新后部署时报错，可能是增、删、改了文件名，需要检查上面两个文件和词库的对应关系。
+#### 没有小字
 
-℞ 安装或更新全部文件
+没有小字，拆分直观，使得简单鹤在打生字时也能快速反应
 
-```
-bash rime-install iDvel/rime-ice:others/recipes/full
-```
+#### 简单鹤拆分规则 
 
-℞ 安装或更新所有词库文件（包含下面三个）
+笔顺优先（无笔画粘连的口可无视笔顺），首末取大，相交也拆，插隔也取，字根字重复，禾取丿八 例如：由 = 日 + 丨， 平 = 一 + 十， 虫 = 虫 + 虫
 
-```
-bash rime-install iDvel/rime-ice:others/recipes/all_dicts
-```
+#### [无理码](other/简单鹤无理码及简词说明.txt) （以下的「我」代指码表作者「简单」）
 
-℞ 安装或更新拼音词库文件（ `cn_dicts/` 目录内所有文件）
+如何看待无理？我认为，无理应该安排超高频的简词，这样它在哪里都无所谓的。
+你问我忘了怎么办？
+忘了就说明重复次数不够，说明它对你没那么高频，那忘了就忘了吧。完美逻辑闭环。
 
-```
-bash rime-install iDvel/rime-ice:others/recipes/cn_dicts
-```
+1. qo和xo，是qx和xq的飞键，仅这两个飞键我强制规范用户记住，因为原按键过于奇葩。故相关的简词也对应调整，但也做了容错。
 
-℞ 安装或更新英文词库文件（ `en_dicts/` 目录内所有文件）
+2. 有不少末尾含“一”的简词，放在了e上。现统计如下：
+we 唯一 万一
+de 第一
+le 了一 另一
+ve 之一
+me 每一
 
-```
-bash rime-install iDvel/rime-ice:others/recipes/en_dicts
-```
+3. “一”开头的量词，以“e”开始。现统计如下：
+eq 一起 一切
+ew 一位
+et 一天
+ey 一眼
+eu 一声 一生
+ei 一场
+ep 一片
+es 一丝
+ed 一旦
+ef 一份 一副
+eg 一股 一根
+eh 一行
+ej 一件 一句
+ek 一块
+ev 一种 一阵 一只
+eb 一般 一边 一半
+en 一年
+em 一名
 
-℞ 安装或更新 opencc （ `opencc/` 目录内所有文件）
+这里有一些超高频的简词，放在了y开头的，这些最好是要掌握起来，实际上讲，我个人除了eq外，几乎不打e开头的简词。
+另外，“一”开头的量词，除了e引导的简外，最好是拆开打。不过也有专属的简码，似乎上百个，如eitd一台，等等。
 
-```
-bash rime-install iDvel/rime-ice:others/recipes/opencc
-```
+yy 一样
+yd 一定 一点
+yg 一个
+yx 一下 一些
+yc 一次
+yv 一直
 
-下面这个配方会在 `radical_pinyin.custom.yaml` 和 `melt_eng.custom.yaml` 里将 `speller/algebra` 修改为对应的双拼拼写，选择一个自己使用的双拼作为参数。
+这些词不要求掌握，真正打字时，很可能拆成了“一”加量词的形式，随用随熟即可。
 
-℞ 双拼补丁
+强调一下，有关于“一”的词，只有2字词有e的设定，其他长度的没有。几和百是同理。
 
-```
-bash rime-install iDvel/rime-ice:others/recipes/config:schema=flypy
-bash rime-install iDvel/rime-ice:others/recipes/config:schema=double_pinyin
-bash rime-install iDvel/rime-ice:others/recipes/config:schema=mspy
-bash rime-install iDvel/rime-ice:others/recipes/config:schema=sogou
-bash rime-install iDvel/rime-ice:others/recipes/config:schema=abc
-bash rime-install iDvel/rime-ice:others/recipes/config:schema=ziguang
-```
+4. 我随便加的，超高频，肯定忘不了就是了：
+yp 一个人 有时候 一会儿
+dp 到时候 的时候（duh打三简也很好，几乎并击秒出，看个人习惯，主要是为了对应x时候）
+vp 这时候
+np 那时候
+jf 不知道
+uo 时间 世界 说：“
 
-℞ 下载特定版本的配置
+5. s和sh的无理：
+js 就是
+bs 不是
+ms 马上 没事 模式
+ls 脸上
+sj 手机
+sb 上班
+sm 什么 上面 生命
+ss 试试
+sh 说话 时候 似乎
+sy 使用
 
-在仓库后加 `@tag` 即可，例如：
+6. c和ch的无理：
+jc 经常
 
-```sh
-bash rime-install iDvel/rime-ice@2024.05.21:others/recipes/full
-```
+7. z和zh的无理：
+zy 重要
 
-### 仓输入法 [Hamster](https://github.com/imfuxiao/Hamster)
+8. 有关“实”的无理：
+sj 实际
+sl 实力
+sx 实现
+xs 现实
 
-参考 [如何导入"雾凇拼音输入方案"](https://github.com/imfuxiao/Hamster/wiki/%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%22%E9%9B%BE%E6%B7%9E%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%96%B9%E6%A1%88%22)
+#### 无理单字
 
-仓输入法目前已内置雾凇拼音，也可以通过【输入方案设置 - 右上角加号 - 方案下载 - 覆盖并部署】来更新雾凇拼音。
+o 也
+p 得 道 道：“
+s 时
+f 能
+je 及（唯一的一个二码，忘了也无所谓，本来也在四码）
+jo 几（以及相关词）
+be 百（以及相关词）
 
-使用九宫格，需要同时启用九宫格方案（输入方案设置）和九宫格布局（键盘设置 - 键盘布局 - 中文 9 键）。
+#### [简词说明](other/简单鹤无理码及简词说明.txt) （以下的「我」代指码表作者「简单」）
 
-### 自动部署脚本
+1. 简词未必会铺满，在长期打字中，我感觉用不到的，我就不加了。
+2. 当词频类似，优先加手感差的，其次考虑简词好对应的。
+3. 所有简词均做了全码，简单鹤词频不搞出简让全，所以不要求掌握记忆，记住哪些打哪些，锦上添花。
+4. 简词的排序，与词频无关，只与对应有关。我们最终是为了打字的体验，以及记忆的易维持，要懂得思考背后的安排。词频是没有意义的。（如：爸 妈 哥 姐 弟 妹 统一在次选）
+5. 三简不用管，这是为了手机上输入方便点，平时挂接打全码才是最舒适的体验。或者只打语气词或连接词这种，如“了一个”“比如说”，随用随熟。（Github上的方案有区别 3码三字简词有稍微手动纠正错音和排序，因为本人在rime使用中会忍不住也想打3简词）
 
-[Mark24Code/rime-auto-deploy](https://github.com/Mark24Code/rime-auto-deploy) 一个自动部署脚本，集成了雾凇拼音，帮助无痛快速安装、部署 Rime 输入法（中州韵、小狼毫，鼠须管）以及部署配置。
+#### 容错（[详细说明](other/简单鹤容错统计截至V8.4.0.txt))
 
-### Arch Linux
+简单鹤有贴心的容错，有时虽然你拆字的字根和推荐用法不一样，但你以为的拆法也许是大家以为的，所以当一个字，你发现有两种打方式打出，不用怀疑是不是错了。
 
-使用 AUR helper 安装 [rime-ice-git](https://aur.archlinux.org/packages/rime-ice-git) 包即可。
+## 配置介绍
 
-```bash
-# paru 默认会每次重新评估 pkgver，所以有新的提交时 paru 会自动更新，
-# yay 默认未开启此功能，可以通过此命令开启
-# yay -Y --devel --save
+- 简体 | 全拼（可加辅码） | 双拼（可加辅码）|音形（自动上屏）|虎码（字词合并）
 
-paru -S rime-ice-git
-# yay -S rime-ice-git
-```
+-  主要功能
 
-推荐使用[补丁](https://github.com/rime/home/wiki/Configuration#補靪)的方式启用。
+  - 轻量的英文输入，支持中英混输（取自 [雾凇拼音](https://github.com/iDvel/rime-ice)）
+  
+  - [优化英文输入体验](https://dvel.me/posts/make-rime-en-better/)
+  
+  - 拆字反查  <kbd>oiz</kbd> + 拼音  (默认为小鹤双拼 支持改为**全拼**或**自然码双拼**)（取自 [雾凇拼音](https://github.com/iDvel/rime-ice)）
+  
+  - 统配反查键 <kbd>\`</kbd> 横排数字键1左边 ，（支持改为**全拼**或**自然码双拼**）
+    <kbd>\`</kbd> + 小鹤双拼 （此配置下所有方案均可以此形式反查，但「虎码」是临时双拼）
+    小鹤双拼 + <kbd>\`</kbd>（**仅限**选择「简单鹤」方案以此形式反查）
+    小鹤双拼+ <kbd>\`</kbd> + 形码 （形码默认是以「自然码字根」支持改为 简单鹤/自然码/虎码/官鹤）
+    
+  - 虎码输入 <kbd>ohm</kbd> + 虎码（本人再使用简单鹤前为虎码用户，所以有带上这个功能）
+  
+  - 雾凇方案下整理的 Emoji （取自 [雾凇拼音](https://github.com/iDvel/rime-ice)）
+  
+  - 以词定字（首字：<kbd>Shift</kbd> + <kbd>1</kbd>，末字：<kbd>Shift</kbd> + <kbd>2</kbd>）
+  
+  - 长词优先（**仅限**选择「朙月拼音」方案下） （取自 [雾凇拼音](https://github.com/iDvel/rime-ice)）
+  
+  - Unicode（<kbd>U</kbd>+Unicode 码位）（取自 [雾凇拼音](https://github.com/iDvel/rime-ice)）
+  
+  - 数字、人民币大写、简易计算器（<kbd>=</kbd> + 数字 或 算式）（取自 [空山五笔](https://github.com/mrshiqiqi/rime-wubi)）
+  
+  - 日期、时间、星期、农历（<kbd>/</kbd>+wd、wt、wk、nl 农历可加数字输入。<kbd>o</kbd> 加对应的简拼也可以，如orq、oxq、osj、onl、）（取自 [飞鹤快拼](https://github.com/boomker/rime-fast-xhup)）
+  
+  - Emoji 表情符号排序后置 （详见配置 `config_base.yaml/emoji_reduce` 节点）（取自 [飞鹤快拼](https://github.com/boomker/rime-fast-xhup)）
+  
+  - 置顶候选项， 将希望排序靠前的字词 按下<kbd>Ctrl</kbd>+<kbd>T</kbd>，再按一下取消指定。数据保存在 `Rime\lua\jdh\pin_word_record.lua` 或 `Rime\lua\tiger\pin_word_record.lua` **仅限 「简单鹤・字词」和「虎码」两个方案下使用**（取自 [飞鹤快拼](https://github.com/boomker/rime-fast-xhup)）
+  
+  - 隐藏候选词或降低排序，将不希望出现在候选中的词组，按下<kbd>Ctrl</kbd>+<kbd>X</kbd> 隐藏，按下<kbd>Ctrl</kbd>+<kbd>J</kbd> 降低排序，数据保存在 `Rime\lua\jdh\cold_word_records\hide_words.lua(隐藏组词)、reduce_freq_words.lua(降频词组)` 虎码方案下储存路径同理。**仅限 「简单鹤」「简单鹤・字词」和「虎码」三个方案下使用**（取自 [飞鹤快拼](https://github.com/boomker/rime-fast-xhup)）
+    在使用该方案时，如果不满意排序的候选，**建议**以此功能来修改，这样独立于码表，方便在后续更新方案时，不被覆盖掉个人的使用习惯
+  
+  - 字集切换开关（区分常用单字和全字集）（取自 [虎码输入方案](https://github.com/ywxt/rime-huma?tab=readme-ov-file)）
+  
+  - 虎码拆字3重注释（已被本人修改为3.5重，0.5重为仅显示拼音，作为其他方案的拼音滤镜）（取自 [虎码输入方案](https://github.com/ywxt/rime-huma?tab=readme-ov-file)）
+  
+  - 字词候选嵌入输入栏开关（取自 [宇浩输入方案](https://github.com/forFudan/yuhao)）
+  
+  - 标点快符自动上屏 <kbd>；</kbd>+ 字母 比如输入 `;a` 自动上屏 `！`（详见配置 `custom_phrase/quick_symbol_phrase.txt` 文件）
+  
+  - <kbd>/FJ</kbd> 前缀: 用于输入常用短语(邮箱/手机号/银行卡号/收件地址); 和打开常用网站网址, 本地文件路径; 执行常见指令(开关系统设置) 等等, 可自行在`Rime\lua\launcher_config.lua` 里添加（取自 [飞鹤快拼](https://github.com/boomker/rime-fast-xhup)）
+  
+  - <kbd>/JK</kbd> 前缀: 用于快速启动或切换程序 可自行在`Rime\lua\launcher_config.lua` （取自 [飞鹤快拼](https://github.com/boomker/rime-fast-xhup)）
+  
+  - 根据是否在用户词典，在结尾加上一个标识（取自 [白霜拼音](https://github.com/gaboolic/rime-frost)）
+    上屏过的候选词 末尾带有「✩」
+  
+    用户短语词库中的候选词（custom_phrase）末尾带有「❖」
+  
+    整句连拼时（输入词库中未有的词句）末尾带有「∞」
+  
+- **简单鹤方案下的特殊介绍**（上述的主要功能全都包含，以下为专有） 
 
-参考下面的配置示例，修改对应输入法框架用户目录（见下）中的 `default.custom.yaml` 文件
+  - 固词动词切换开关 （简单鹤词库候选末尾会带一个「⌃」符号区分） （取自 [魔然输入方案](https://github.com/ksqsf/rime-moran)）
+    **固词模式**下 输入的前4码 为简单鹤码表词库，固定排列在最前面，拼音词库作为补充，当简单鹤空码，排序靠前
+    **动词模式**下 只有输入的前3码 为简单鹤码表词库，固定排序在最前面，拼音词库作为补充，4码排序靠前，而且会随着候选上屏情况，调节词序（此模式下 简单鹤的4码单字不会优先靠前）
+    习惯音形，字词输入节奏的用户，建议<kbd>Ctrl</kbd>+<kbd>~</kbd> 切换成 **固词模式**，四码词序和单字确定性更强
 
-- iBus 为 `$HOME/.config/ibus/rime/`
-- Fcitx5 为 `$HOME/.local/share/fcitx5/rime/`
+  - 简码提示 （取自 [魔然输入方案](https://github.com/ksqsf/rime-moran)）
+    如果以完整编码在输入2字词 3字词 4字词时，和在候选提示该词的简码
 
-<details>
-<summary>default.custom.yaml</summary>
+    如果希望单字也提示简码，可自行在`double_pinyin_flypy.custom.yaml/moran/quick_code_hint_min_len`修改
 
-```yaml
-patch:
-  # 仅使用「雾凇拼音」的默认配置，配置此行即可
-  __include: rime_ice_suggestion:/
-  # 以下根据自己所需自行定义，仅做参考。
-  # 针对对应处方的定制条目，请使用 <recipe>.custom.yaml 中配置，例如 rime_ice.custom.yaml
-  __patch:
-    key_binder/bindings/+:
-      # 开启逗号句号翻页
-      - { when: paging, accept: comma, send: Page_Up }
-      - { when: has_menu, accept: period, send: Page_Down }
-```
+  - 自定义置顶词 自造词 快捷键响应（取自 [魔然输入方案](https://github.com/ksqsf/rime-moran)）
+  
+    详情见`double_pinyin_flypy.custom.yaml/moran/pin/enable`节点下注释
+  
+    该方案也是将希望排序靠前的字词 按下<kbd>Ctrl</kbd>+<kbd>T</kbd>，再按一下取消指定。但区别于主要功能中介绍的那个功能，该功能数据保存在 「moran_pin.userdb」中，可以方便的使用 RIME 自带的同步功能将设备间 调整过的内容同步合并
+  
+    造词功能 通过输入 “编码A”//“编码B” 实现造词功能，编码A是这个新词的新编码 
+  
+    比如 输入「aa」后加上<kbd>//</kbd>然后在完整打出候选「 jm dj hei fh an」（简单鹤方案），以后就能在输入「aa」时打出 「简单鹤方案」 这个候选了
+  
+    置顶词自造词候选末尾会带有「ᵀᴼᴾ」标识以作区分
+  
+    在使用简单鹤方案时，如果不满意排序的候选，**建议**以此功能来修改，这样独立于码表，方便在后续更新方案时，不被覆盖掉个人的使用习惯
 
-</details>
+- 词库信息
 
-<br>
+  - **拼音词库** 引用的是 [白霜拼音词库](https://github.com/gaboolic/rime-frost) ，按照 [万象拼音](https://github.com/gaboolic/rime-frost) 辅码映射规则转化为，支持简单鹤、自然码、虎码首末码、官鹤。如有修改需求可查看方案中的注释
+
+  - **虎码词库** 引用的是 [虎码秃版2024.08.31](https://github.com/gaboolic/rime-frost) 中的单字与词组
+
+  - **简单鹤词库**  引用码表方案作者「**简单**」在交流群中更新的最新码表
+
+    其中不同处为 **3码下的三字词**为本人手动维护，因为还未完全改完，如遇到同音错词，排序反常理，请暂时无视它（三简词是送的，不要赌），或告知让我修正。
+
+    **三字词只打语气词和连接词，三简通常只作为手机辅助 ，名词请用双拼 六码秒了！！！**
+
+## 杂项 
+
+**ctrl+~切换方案**
+
+- 简单鹤用户默认启用了 **「固词」**，体验完全体的简单鹤
+- 如需要启用**「动词」**，自行在`double_pinyin_flypy.custom.yaml/switches/inflexible/reset: 1` **修改为reset: 0**，启用后需要用户手动打开**「屏蔽」**这个开关选项（作用是可以屏蔽四码时简单鹤词库中为了固定单字次选的占位符号「➀」，因为默认动词下单字的会让给词组，故不需要占位符号，不去除的话，单字会被挤占到3选的位置）
+
+**简单鹤**（虽然文件名是朴素的 double_pinyin_flypy，但实际上补丁中已让其大变样）
+
+**简单鹤・字词**（四码定长，自动上屏）
+
+- **如果打开过上述「屏蔽」开关，请手动切换到「正常」，将占位符号「➀」恢复，否则四码无词时，单字会在首选**
+
+**朙月拼音・全拼**（虽然文件名是朴素的 luna_pinyin，但实际上补丁中已让其大变样，词库也改为使用白霜拼音。因为小狼毫在「用户配置文件为空」时每次部署都会生成「luna_pinyin.userdb」，本人不想手动删除，索性自用方案也改为 「luna_pinyin」）
+
+**虎码** （虽然文件名是朴素的 tiger，但实际上补丁中已让其大变样。本人在使用简单鹤前，为虎码用户，该方案是单字+词组，两库融合，纯单用户可用开关控制其为纯单 ）
+
+## 简单鹤 🐧交流群：819641961
+
+
 
 ## 感谢 ❤️
 
-特别感谢上文已经提及的词库、词典的作者、贡献者及整理者；特别感谢以及下列词库、方案、脚本的作者及贡献者（提及的均为 GitHub id）：
+特别感谢上文已经提及的词库、词典的作者、贡献者及整理者；特别感谢以及下列词库、方案、脚本的作者及贡献者：
 
-- @mozillazg 开发的汉字转拼音工具和数据库（MIT）
-- [melt_eng](https://github.com/tumuyan/rime-melt)（@tumuyan | [Apache 2.0](https://github.com/tumuyan/rime-melt/blob/master/LICENSE)） ：提供了部分（约 1000 条）英文词汇以及原始英文方案参考；
-- [部件拆字方案](https://github.com/mirtlecn/rime-radical-pinyin)（@mirtlecn | [GPL 3.0](https://github.com/mirtlecn/rime-radical-pinyin/blob/master/LICENSE)）：提供的拆字反查和候选筛选插件；
-- [长词优先插件](https://github.com/tumuyan/rime-melt/blob/master/lua/melt.lua)（@tumuyan | [Apache 2.0](https://github.com/tumuyan/rime-melt/blob/master/LICENSE)）
-- [Unicode 插件](https://github.com/shewer/librime-lua-script/blob/main/lua/component/unicode.lua)（@shewer | [MIT](https://github.com/shewer/librime-lua-script/blob/main/lua/component/unicode.lua)）
-- [数字、人民币大写插件](https://github.com/yanhuacuo/98wubi/blob/master/lua/number.lua)（@98wubi）
-- [农历插件](https://github.com/boomker/rime-fast-xhup)（@boomker | [LGPL 3.0](https://github.com/boomker/rime-fast-xhup/blob/master/LICENSE)）
-- 未能在此处详述的、在本库源码注释中提及的项目及作者给予的帮助和参考
+- [雾凇拼音](https://github.com/iDvel/rime-ice) 接触RIME输入法时第一个遇到的方案，详细的注释，使得我能快速上手
+- [飞鹤快拼](https://github.com/boomker/rime-fast-xhup) 本方案中大部分特殊功能的Lua，皆来自此方案。
+- [部件拆字方案](https://github.com/mirtlecn/rime-radical-pinyin) 提供的拆字反查
+- [白霜拼音](https://github.com/gaboolic/rime-frost) 本方案的拼音词库与码表转换的脚本来自此方案
+- [万象拼音](https://github.com/gaboolic/rime-frost) 双拼与全拼辅码映射规则、语言模型，皆参考自此方案，
+- [薄荷拼音](https://github.com/Mintimate/oh-my-rime) 本方案中的部分配色，取自此方案。
+- [魔改自然碼](https://github.com/ksqsf/rime-moran) 简单鹤方案中最关键的灵魂 Lua，来自此方案，让简单鹤能挂接在双拼上
+- 热心网友, 其他开源输入法方案
 
-感谢 [@Huandeep](https://github.com/Huandeep) 整理的多个词库。
-
-感谢 [@Mirtle](https://github.com/mirtlecn) 完善的多个功能。
-
-感谢所有贡献者。
-
-<!-- 搜狗转 Rime：[lewangdev/scel2txt](https://github.com/lewangdev/scel2txt) -->
-
-Thanks to JetBrains for the OSS development license.
-
-[![JetBrains](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://jb.gg/OpenSourceSupport)
-
-<br>
-
-## 赞助 ☕
-
-如果觉得项目不错，可以请 Dvel 吃个煎饼馃子。
-
-<img src="./others/sponsor.webp" alt="请 Dvel 吃个煎饼馃子" width=600 />
