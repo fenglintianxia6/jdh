@@ -11,18 +11,18 @@ Eng:
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    config_base: 1736475022
+    config_base: 1736738408
     config_base.custom: 0
     default: 1717774589
-    default.custom: 1736475022
+    default.custom: 1736738408
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
-    symbols: 1736475022
+    symbols: 1736738408
     symbols.custom: 0
-    tiger.custom: 1736475022
-    tiger.schema: 1736475022
+    tiger.custom: 1736738408
+    tiger.schema: 1736738408
 charset_filter:
   tags:
     - abc
