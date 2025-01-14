@@ -1,2 +1,5 @@
-2025/01/12-21:02:10.567864 0x1ec5fc240 Creating DB /Users/zyf/Library/Rime/moran_pin.userdb since it was missing.
-2025/01/12-21:02:10.600205 0x1ec5fc240 Delete type=3 #1
+2025/01/13-17:31:24.878086 0x1ec5fc240 Recovering log #3
+2025/01/13-17:31:24.878192 0x1ec5fc240 Level-0 table #5: started
+2025/01/13-17:31:24.883413 0x1ec5fc240 Level-0 table #5: 235 bytes OK
+2025/01/13-17:31:24.898390 0x1ec5fc240 Delete type=0 #3
+2025/01/13-17:31:24.898400 0x1ec5fc240 Delete type=3 #2
