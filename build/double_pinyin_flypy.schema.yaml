@@ -1,19 +1,19 @@
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    config_base: 1736816536
+    config_base: 1736912756
     config_base.custom: 0
-    config_pinyin: 1736816536
+    config_pinyin: 1736912756
     config_pinyin.custom: 0
     default: 1717774589
-    default.custom: 1736824603
-    double_pinyin_flypy.custom: 1736816536
-    double_pinyin_flypy.schema: 1736816536
+    default.custom: 1736912756
+    double_pinyin_flypy.custom: 1736912756
+    double_pinyin_flypy.schema: 1736912756
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
-    symbols: 1736816536
+    symbols: 1736912756
     symbols.custom: 0
 axu_code:
   show_aux_notice: trigger

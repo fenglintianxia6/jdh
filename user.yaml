@@ -1,5 +1,7 @@
 var:
-  last_build_time: 1736905630
+  last_build_time: 1736922892
+  option:
+    simplification: false
   previously_selected_schema: JDhe
   schema_access_time:
     JDhe: 1736819705
