@@ -1,0 +1,5 @@
+# Rime user dictionary
+#@/db_name	moran_pin
+#@/db_type	userdb
+#@/rime_version	1.11.2
+#@/user_id	29555ee2-82e0-484f-bcda-5522cc72965d
