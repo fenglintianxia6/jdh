@@ -17,8 +17,8 @@ switches:
   - name: ascii_mode
     reset: 0
     states: [ 中, En ]
-  - name: full_shape
-    states: [ 半, 全 ]  # 符号
+    #  - name: full_shape
+    #states: [ 半, 全 ]  # 符号
   - name: ascii_punct
     states: [ 。，, ．， ] # 中文标点，英文标点 
 
