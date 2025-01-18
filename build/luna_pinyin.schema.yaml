@@ -1,19 +1,19 @@
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    config_base: 1737012426
+    config_base: 1737200112
     config_base.custom: 0
-    config_pinyin: 1737012426
+    config_pinyin: 1737200112
     config_pinyin.custom: 0
     default: 1717774589
-    default.custom: 1737012426
+    default.custom: 1737200112
     key_bindings: 1717774589
     key_bindings.custom: 0
-    luna_pinyin.custom: 1737012426
-    luna_pinyin.schema: 1737012426
+    luna_pinyin.custom: 1737200112
+    luna_pinyin.schema: 1737200112
     punctuation: 1717774589
     punctuation.custom: 0
-    symbols: 1737012426
+    symbols: 1737200112
     symbols.custom: 0
 axu_code:
   show_aux_notice: trigger

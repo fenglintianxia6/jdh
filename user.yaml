@@ -1,9 +1,9 @@
 var:
-  last_build_time: 1737012440
+  last_build_time: 1737200130
   option:
     simplification: false
-  previously_selected_schema: tiger
+  previously_selected_schema: JDhe
   schema_access_time:
-    JDhe: 1737075225
+    JDhe: 1737200512
     double_pinyin_flypy: 1737000429
     tiger: 1737106013
