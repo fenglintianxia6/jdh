@@ -1,16 +1,16 @@
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    config_pinyin: 1737359282
+    config_pinyin: 1737438637
     config_pinyin.custom: 0
     default: 1717774589
-    default.custom: 1737359282
+    default.custom: 1737438637
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
     wanxiang_pinyin_dz.custom: 0
-    wanxiang_pinyin_dz.schema: 1737359282
+    wanxiang_pinyin_dz.schema: 1737438637
 algebra_flypy:
   __append:
     - "xlit/āáǎàōóǒòēéěèīíǐìūúǔùǖǘǚǜü/aaaaooooeeeeiiiiuuuuvvvvv/"
