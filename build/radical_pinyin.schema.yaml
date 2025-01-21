@@ -2,13 +2,13 @@ __build_info:
   rime_version: 1.11.2
   timestamps:
     default: 1717774589
-    default.custom: 1737438637
+    default.custom: 1737444050
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
     radical_pinyin.custom: 0
-    radical_pinyin.schema: 1737438637
+    radical_pinyin.schema: 1737444050
 algebra_abc:
   - "xform/^zh/<a>/"
   - "xform/^ch/<e>/"

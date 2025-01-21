@@ -11,17 +11,17 @@ Eng:
 __build_info:
   rime_version: 1.11.2
   timestamps:
-    JDhe.custom: 1737438637
-    JDhe.schema: 1737438637
-    config_base: 1737438637
+    JDhe.custom: 1737444049
+    JDhe.schema: 1737444049
+    config_base: 1737444050
     config_base.custom: 0
     default: 1717774589
-    default.custom: 1737438637
+    default.custom: 1737444050
     key_bindings: 1717774589
     key_bindings.custom: 0
     punctuation: 1717774589
     punctuation.custom: 0
-    symbols: 1737438637
+    symbols: 1737444050
     symbols.custom: 0
 charset_filter:
   tags:
